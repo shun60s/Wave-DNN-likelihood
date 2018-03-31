@@ -21,7 +21,7 @@ python calu_likelihood.py
 ```
 による対数尤度の計算例です。  
 ![対数尤度の計算例](Log_likelihood_calcuation_result0.png)  
-
+Juliusの設定で　-salign （認識結果のHMM状態ごとのアラインメント結果を出力）　を利用して TriphoneとそのHMMの状態の時系列を得ることができる。  
 
 
 
@@ -36,13 +36,9 @@ python read_binhmm.py
 ``` 
 で作成できます。   
  
-- PLAY-16.wav　音声波形のサンプル
-- dnn_output_sample0.npy　DNNの出力のサンプル
-
-
+- PLAY-16.wav　音声波形のサンプル。認識結果は「はい。」になっているが、実際には「プレー」と発話している。最後尾の音は処理区間の都合上無視されている。  
+- dnn_output_sample0.npy　DNNの出力のサンプル。 Juliusディクテーションキットversion 4.4のDNN(dnnclient)版を利用してDNN出力を取り出したもの。  
   
-
-## 注意  
 DNNの出力の求め方については[Wave-DNN](https://github.com/shun60s/Wave-DNN) を参照してください。  
 
 ## ライセンス   
