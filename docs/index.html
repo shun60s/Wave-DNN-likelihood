@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>音声信号のDNN-HMMの対数尤度の計算</title>
+<meta property="og:title" content="音声信号のDNN-HMMの対数尤度の計算" />
+<meta property="og:locale" content="ja_JP" />
+<meta name="description" content="音声信号のDNN-HMMの対数尤度の計算" />
+<meta property="og:description" content="音声信号のDNN-HMMの対数尤度の計算" />
+<link rel="canonical" href="https://shun60s.github.io/Wave-DNN-likelihood/" />
+<meta property="og:url" content="https://shun60s.github.io/Wave-DNN-likelihood/" />
+<meta property="og:site_name" content="Wave-DNN-HMMの対数尤度の計算" />
+
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="alternate" hreflang="ja" href="https://shun60s.github.io/Wave-DNN-likelihood/" />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+
+      <h1 id="hmm">Wave-DNN-Likelihood</h1>
+
+<h2 id="概要">概要</h2>
+
+<p>音声認識エンジンJuliusのディクテーションキットに含まれるDNN-HMMモデルを利用して対数尤度を計算するpythonを作ってみた。</p>
+
+<p><a href="https://github.com/shun60s/Wave-DNN-likelihood">github repository</a></p>
+
+<h2 id="使い方">使い方</h2>
+<h3 id="1DNNのmodelの準備">1.DNNのmodelの準備</h3>
+
+<p>Juliusのディクテーションキットversion 4.4を下記よりダウンロードする。<br /> <a href="http://julius.osdn.jp/index.php?q=dictation-kit.html">http://julius.osdn.jp/index.php?q=dictation-kit.html</a> <br />
+model/以下を展開する。</p>
+
+
+
+<h3 id="2各プログラムの説明 ">2.各プログラムの説明 </h3>
+
+<ul>
+  <li><p>read_binhmm.py  Juliusのディクテーションキットversion 4.4のDNN-HMM音響モデルを読み込み,HMMモデル,遷移行列,Triphoneとの対応を出力するクラス。</p></li>
+  <li><p>calu_likelihood.py　既知の、TriphoneとそのHMMの状態の時系列から対数尤度を計算するクラス。</p></li>
+</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python calu_likelihood.py
+</code></pre></div></div>
+<p>による対数尤度の計算例です。<br /></p>  
+<p><img src="Log_likelihood_calcuation_result0.png" alt="対数尤度の計算例" /></p>
+<p>Juliusの設定で　-salign （認識結果のHMM状態ごとのアラインメント結果を出力）　を利用して TriphoneとそのHMMの状態の時系列を得ることができる。<br /></p>  
+
+
+<h3 id="3各データの説明 ">3.各データの説明 </h3>
+
+<p>以下のデータは、Juliusディクテーションキットversion 4.4に含まれるデータを利用して作成しています。 <br /></p>  
+
+
+<ul>
+<li><p>hmm_model_data0.npy　Juliusのディクテーションキットversion 4.4のDNN-HMM音響モデルから作ったHMMモデル(DNNの出力へのインデックス） </p></li>
+<li><p>transition_matrix_data0.npy Juliusのディクテーションキットversion 4.4のDNN-HMM音響モデルから作った遷移行列</p></li>
+<li><p>dictionary_hmm_trans_hiddenstatenum0.json  Juliusのディクテーションキットversion 4.4のDNN-HMM音響モデルから作った上記とTriphoneとの対応 </p></li>
+</ul>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python read_binhmm.py
+</code></pre></div></div>
+<p>で作成できます。<br /></p>
+</ br>
+
+<ul>
+<li><p> PLAY-16.wav　音声波形のサンプル。認識結果は「はい。」になっているが、実際には「プレー」と発話している。最後尾の音は処理区間の都合上無視されている。</p> </li>
+<li><p>dnn_output_sample0.npy　DNNの出力のサンプル。 Juliusディクテーションキットversion 4.4のDNN(dnnclient)版を利用してDNN出力を取り出したもの。  </p> </li>
+</ul>
+
+<p>DNNの出力の求め方については<a href="https://github.com/shun60s/Wave-DNN"> Wave-DNN</a> を参照してください。
+</p>
+
+
+<h2 id="ライセンス">ライセンス</h2>
+<p>以下のライセンス文を参照のこと。</p> <br />
+
+<a href="./LICENSE-Julius Dictation Kit.txt">LICENSE-Julius Dictation Kit.txt</a>   <br />
+<a href="./LICENSE-Julius.txt">LICENSE-Julius.txt</a> <br />
+<br />
+<br />
+<br />
+
+      
+    </div>
+  </body>
+</html>
