@@ -13,15 +13,15 @@ model/以下を展開する。
 ### 2.各プログラムの説明  
   
 - read_binhmm.py  Juliusのディクテーションキットversion 4.4のDNN-HMM音響モデルを読み込み,HMMモデル,遷移行列,Triphoneとの対応を出力するクラス。
-- calu_likelihood.py　既知の、TriphoneとそのHMMの状態の時系列から対数尤度を計算するクラス。  
+- calcu_likelihood.py　既知の、TriphoneとそのHMMの状態の時系列から対数尤度を計算するクラス。  
   
   
 ```
-python calu_likelihood.py
+python calcu_likelihood.py
 ```
 下記は対数尤度の計算例です。  
 ![対数尤度の計算例](Log_likelihood_calcuation_result0.png)  
-Juliusの設定で　-salign （認識結果のHMM状態ごとのアラインメント結果を出力）　を利用して TriphoneとそのHMMの状態の時系列を得ることができる。  
+Juliusの設定で　-salign （認識結果のHMM状態ごとのアラインメント結果を出力）　を利用して TriphoneとそのHMMの状態の時系列を得ることができます。  
 
   
 - calcu_max_likelihood.py Triphoneの時系列から最大対数尤度を計算するクラス。  
