@@ -19,9 +19,22 @@ model/以下を展開する。
 ```
 python calu_likelihood.py
 ```
-による対数尤度の計算例です。  
+下記は対数尤度の計算例です。  
 ![対数尤度の計算例](Log_likelihood_calcuation_result0.png)  
 Juliusの設定で　-salign （認識結果のHMM状態ごとのアラインメント結果を出力）　を利用して TriphoneとそのHMMの状態の時系列を得ることができる。  
+
+  
+- calcu_max_likelihood.py Triphoneの時系列から最大対数尤度を計算するクラス。  
+```
+python calcu_max_likelihood.py
+```
+下記は最大対数尤度の計算例です。  
+![最大対数尤度の計算例](result_maximum_likelihood.png)  
+DNNの出力のサンプルを使って、「はい」「第」「プレイ」の３個のTriphoneの時系列について最大対数尤度（am_score=）を計算しています。  
+「第」は27.36と高いのですが、Juliusの認識結果は最終的には22.069の「はい」と判定されました。  
+実際の発話の「プレイ」は、発話区間が無音(sp_S)にアサインされ、-46.86と低い値になっています。  
+
+
 
 
 
