@@ -56,7 +56,8 @@ model/以下を展開する。</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python calcu_max_likelihood.py
 </code></pre></div></div>
 <p>下記は最大対数尤度の計算例です。<br /></p>  
-<p>DNNの出力のサンプルの、「はい」「第」「プレイ」の３個のTriphoneの時系列についての最大対数尤度（am_score=）を計算しています。<br />
+<p><img src="result_maximum_likelihood.png" alt="最大対数尤度の計算例" /></p>
+<p>DNNの出力のサンプルの、「はい」「第」「プレイ」の３個のTriphoneの時系列についての最大対数尤度（am_score=値）を計算しています。<br />
 </p>
 <p> 「第」は27.36と高いのですが、Juliusの認識結果は最終的には22.069の単独音の「はい。」と判定されました。実際の発話の「プレイ」は、発話区間が無音(sp_S)にアサインされ、-46.86と低い値になっています。 <br /></p>
 <br />
