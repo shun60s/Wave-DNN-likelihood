@@ -3,7 +3,7 @@
 ###############################################################################
 #Description:
 # calculate maximum Log-likelihood of DNN-HMM model based on Viterbi algorithm
-#
+# warning: this is not complete compatible with julius.
 #
 # Input:
 #    time series of triphone
