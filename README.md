@@ -20,7 +20,7 @@ model/ˆÈ‰º‚ð“WŠJ‚·‚éB
 python calcu_likelihood.py
 ```
 ‰º‹L‚Í‘Î”–Þ“x‚ÌŒvŽZ—á‚Å‚·B  
-![‘Î”–Þ“x‚ÌŒvŽZ—á](Log_likelihood_calcuation_result0.png)  
+![‘Î”–Þ“x‚ÌŒvŽZ—á](docs/Log_likelihood_calcuation_result0.png)  
 Julius‚ÌÝ’è‚Å@-salign i”FŽ¯Œ‹‰Ê‚ÌHMMó‘Ô‚²‚Æ‚ÌƒAƒ‰ƒCƒ“ƒƒ“ƒgŒ‹‰Ê‚ðo—Íj@‚ð—˜—p‚µ‚Ä Triphone‚Æ‚»‚ÌHMM‚Ìó‘Ô‚ÌŽžŒn—ñ‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B  
 
   
@@ -29,7 +29,7 @@ Julius‚ÌÝ’è‚Å@-salign i”FŽ¯Œ‹‰Ê‚ÌHMMó‘Ô‚²‚Æ‚ÌƒAƒ‰ƒCƒ“ƒƒ“ƒgŒ‹‰Ê‚ðo—Íj@‚ð—
 python calcu_max_likelihood.py
 ```
 ‰º‹L‚ÍÅ‘å‘Î”–Þ“x‚ÌŒvŽZ—á‚Å‚·B  
-![Å‘å‘Î”–Þ“x‚ÌŒvŽZ—á](result_maximum_likelihood.png)  
+![Å‘å‘Î”–Þ“x‚ÌŒvŽZ—á](docs/result_maximum_likelihood.png)  
 DNN‚Ìo—Í‚ÌƒTƒ“ƒvƒ‹‚ÌAu‚Í‚¢vu‘ævuƒvƒŒƒCv‚Ì‚RŒÂ‚ÌTriphone‚ÌŽžŒn—ñ‚É‚Â‚¢‚Ä‚ÌÅ‘å‘Î”–Þ“xiam_score=’lj‚ðŒvŽZ‚µ‚Ä‚¢‚Ü‚·B  
 u‘æv‚Í27.36‚Æ‚‚¢‚Ì‚Å‚·‚ªAJulius‚Ì”FŽ¯Œ‹‰Ê‚ÍÅI“I‚É‚Í22.069‚Ì’P“Æ‰¹‚Ìu‚Í‚¢Bv‚Æ”»’è‚³‚ê‚Ü‚µ‚½B  
 ŽÀÛ‚Ì”­˜b‚ÌuƒvƒŒƒCv‚ÍA”­˜b‹æŠÔ‚ª–³‰¹(sp_S)‚ÉƒAƒTƒCƒ“‚³‚êA-46.86‚Æ’á‚¢’l‚É‚È‚Á‚Ä‚¢‚Ü‚·B  
